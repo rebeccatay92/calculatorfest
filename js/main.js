@@ -22,6 +22,7 @@ function init () {
       } // close else
     } // close checkkeycode
   } // close onkeyup
+
   function calculateAdd (str) {
     var splitStr = str.replace(/ /g, '').split('+')
     var firstNum = parseInt(splitStr[0])
@@ -50,6 +51,7 @@ function init () {
     var result = basic_calc.division(firstNum, secondNum)
     displayResult(result)
   }
+
   function displayResult (str) {
     display.value = str
   }
