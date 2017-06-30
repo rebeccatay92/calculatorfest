@@ -18,10 +18,10 @@ function init () {
         if (displayValue.includes('-')) calculateMinus(displayValue)
         if (displayValue.includes('*')) calculateMultiply(displayValue)
         if (displayValue.includes('/')) calculateDivision(displayValue)
-        if (event.keyCode === 8) display.value = '' //delete clears the screen
-      }
-    }
-  }
+        if (event.keyCode === 8) display.value = '' // delete clears the screen
+      } // close else
+    } // close checkkeycode
+  } // close onkeyup
   function calculateAdd (str) {
     var splitStr = str.replace(/ /g, '').split('+')
     var firstNum = parseInt(splitStr[0])
@@ -29,7 +29,6 @@ function init () {
     var result = basic_calc.add(firstNum, secondNum)
     displayResult(result)
   }
-
   function calculateMinus (str) {
     var splitStr = str.replace(/ /g, '').split('-')
     var firstNum = parseInt(splitStr[0])
@@ -37,7 +36,6 @@ function init () {
     var result = basic_calc.minus(firstNum, secondNum)
     displayResult(result)
   }
-
   function calculateMultiply (str) {
     var splitStr = str.replace(/ /g, '').split('*')
     var firstNum = parseInt(splitStr[0])
@@ -45,7 +43,6 @@ function init () {
     var result = basic_calc.multiply(firstNum, secondNum)
     displayResult(result)
   }
-
   function calculateDivision (str) {
     var splitStr = str.replace(/ /g, '').split('/')
     var firstNum = parseInt(splitStr[0])
@@ -53,7 +50,6 @@ function init () {
     var result = basic_calc.division(firstNum, secondNum)
     displayResult(result)
   }
-
   function displayResult (str) {
     display.value = str
   }
